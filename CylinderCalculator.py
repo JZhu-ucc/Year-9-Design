@@ -1,9 +1,15 @@
 import tkinter as tk
 
+def submit():
+	print("Submit pressed.")
+	
+
+
+
 root = tk.Tk() 
 root.title("Volume of a cylinder")
 
-labr = tk.Label(root, text="radius")
+labr = tk.Label(root, text="Radius")
 labr.pack()
 entr = tk.Entry(root)
 entr.pack()
