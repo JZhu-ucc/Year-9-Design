@@ -2,7 +2,11 @@ import tkinter as tk
 import os as os
 
 
-
+def change_drop (*args) :
+	if option == "Sig figs"
+	var change_dropd == 0
+	else 
+	change_dropd = 1
 def change(*args):
 	print("running change")
 	print(var.get())
@@ -48,7 +52,7 @@ checkAccess.pack()
 
 labIn1 = tk.Label(root, text = "Input the number to operate on") 
 labIn1.pack()
-
+entIn1.get/1000 = output.get
 entIn1 = tk.Entry(root)
 entIn1.pack(padx = 10)
 binSubmit = tk.Button(root, text = "Submit", command = submit)
@@ -59,3 +63,13 @@ output.pack()
 
 
 root.mainloop() 
+## savelist
+##def SaveasList(): 
+##	root.filename = filedialogue.asksaveasfilename(initialdir = "/", title = "Saved Calculations")
+##
+
+
+
+
+
+
