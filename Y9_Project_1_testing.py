@@ -2,16 +2,11 @@ import tkinter as tk
 import os as os
 
 
-#def change_drop (*args) :
-#	if option == "Sig figs"
-#	var change_dropd == 0
-#	else 
-#	change_dropd = 1
-##def change_drop (*args) :
-##	if option == "Sig figs"
-##	var change_dropd == 0
-##	else 
-##	change_dropd = 1
+def change_drop (*args) :
+	if option == "Sig figs"
+	var change_dropd == 0
+	else 
+	change_dropd = 1
 def change(*args):
 	print("running change")
 	print(var.get())
@@ -19,25 +14,22 @@ def change(*args):
 def setting():
 	print("TEST")
 
+def acc_press(event):
+	acc_pressed = true
+
+def acc_rel(event):
+	acc_pressed = false
+
+def submit():
+	print("Submit pressed")
+	output.insert(tk.END,"Paul")
+	if varCheck.get() == 1:
+		text = "You entered "+entIn1.get+ " the result is "+output.get()
+		os.system("say "+text)
+
 
 def checkchange():
 	print(varCheck.get())
-
-def submit():
-	try:
-		print("Submit pressed")
-		x = entIn1.get
-		x = int(entIn1.get())
-		entIn1.delete(0, tk.END)
-		##answers.append(x)
-		print(x)
-		if varCheck.get() == 1:
-			text = "You entered "+entIn1.get+ " the result is "+output.get()
-			os.system("say "+text)
-	except:
-		print("Please input an integer")
-
-
 
 root = tk.Tk() 
 
@@ -60,6 +52,7 @@ checkAccess.pack()
 
 labIn1 = tk.Label(root, text = "Input the number to operate on") 
 labIn1.pack()
+entIn1.get/1000 = output.get
 entIn1 = tk.Entry(root)
 entIn1.pack(padx = 10)
 binSubmit = tk.Button(root, text = "Submit", command = submit)
@@ -73,6 +66,8 @@ root.mainloop()
 ## savelist
 ##def SaveasList(): 
 ##	root.filename = filedialogue.asksaveasfilename(initialdir = "/", title = "Saved Calculations")
+##
+
 ##entIn1.get*1000
 
 
