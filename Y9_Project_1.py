@@ -2,11 +2,7 @@ import tkinter as tk
 import os as os
 
 
-#def change_drop (*args) :
-#	if option == "Sig figs"
-#	var change_dropd == 0
-#	else 
-#	change_dropd = 1
+
 ##def change_drop (*args) :
 ##	if option == "Sig figs"
 ##	var change_dropd == 0
@@ -18,7 +14,8 @@ def change(*args):
 
 def setting():
 	print("TEST")
-
+##def anslist():
+##	print (x1)
 
 def checkchange():
 	print(varCheck.get())
@@ -26,11 +23,9 @@ def checkchange():
 def submit():
 	try:
 		print("Submit pressed")
-		x = entIn1.get
 		x = int(entIn1.get())
-		entIn1.delete(0, tk.END)
-		##answers.append(x)
-		print(x)
+##		answers.append(x1)
+		print(x*1000)
 		if varCheck.get() == 1:
 			text = "You entered "+entIn1.get+ " the result is "+output.get()
 			os.system("say "+text)
@@ -64,9 +59,8 @@ entIn1 = tk.Entry(root)
 entIn1.pack(padx = 10)
 binSubmit = tk.Button(root, text = "Submit", command = submit)
 binSubmit.pack() 
-output = tk.Entry(root)
-output.config(state = "disable")
-output.pack() 
+
+ 
 
 
 root.mainloop() 
