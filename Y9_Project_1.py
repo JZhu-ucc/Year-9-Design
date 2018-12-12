@@ -21,19 +21,39 @@ def checkchange():
 	print(varCheck.get())
 
 def submit():
-	try:
-		print("Submit pressed")
-		x = int(entIn1.get())
-##		answers.append(x1)
-		print(x*1000)
-		if varCheck.get() == 1:
-			text = "You entered "+entIn1.get+ " the result is "+output.get()
-			os.system("say "+text)
-	except:
-		print("Please input an integer")
+	a = var.get()
+	if a == "Sig Figs":
+		print("")
+		x = entIn1.get() #still a string
+		tlist = list(x)
+		print(tlist)
+
+		#find the first zero in the list
+		#write with a for loop
+		loc = -1 #no zero
+		for i in range(0,len(tlist),1):
+			if tlist[i] == "0":
+				loc = i
+				break #exits loop
+
+		print(loc)
+	else:
+		try:
+			print("Submit pressed")
+			x = int(entIn1.get())
+			answers.append(x)
+			print(x*1000)
+			if varCheck.get() == 1:
+				text = "You entered "+entIn1.get+ " the result is "+x*1000
+				os.system("say "+text)
+				print("Test***********")
+		except:
+			print("Please input an integer")
+
+	print(answers)
 
 
-
+answers = []
 root = tk.Tk() 
 
 
@@ -67,7 +87,6 @@ root.mainloop()
 ## savelist
 ##def SaveasList(): 
 ##	root.filename = filedialogue.asksaveasfilename(initialdir = "/", title = "Saved Calculations")
-##entIn1.get*1000
 
 
 
