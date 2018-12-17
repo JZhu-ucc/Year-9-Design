@@ -27,14 +27,18 @@ def submit():
 		x = entIn1.get() #still a string
 		tlist = list(x)
 		print(tlist)
-
 		#find the first zero in the list
 		#write with a for loop
 		loc = -1 #no zero
-		for i in range(0,len(tlist),1):
+		##Backwarsd through list
+		for i in range(len(tlist) - 1, -1, -1):
 			if tlist[i] == "0":
 				loc = i
 				break #exits loop
+
+		if varCheck.get() == 1:
+					text1 = " You entered " + str(entIn1.get()) + ". Your result was" + str(loc) + " ."
+					os.system("say \""+text1+"\"")
 
 		print(loc)
 	else:
@@ -43,15 +47,15 @@ def submit():
 			x = int(entIn1.get())
 			answers.append(x)
 			print(x*1000)
-			if varCheck.get() == 1:
-				text = "You entered "+entIn1.get+ " the result is "+x*1000
-				os.system("say "+text)
-				print("Test***********")
+			x2 = x*1000
+			
 		except:
 			print("Please input an integer")
 
 	print(answers)
-
+	if varCheck.get() == 1:
+					text2 = "You entered "+str(entIn1.get)+ " the result is "+ str(x2)
+					os.system("say \""+text2+"\"")
 
 answers = []
 root = tk.Tk() 
